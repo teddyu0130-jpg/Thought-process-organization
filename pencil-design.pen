@@ -1,0 +1,1483 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "u1YHz",
+      "x": 0,
+      "y": -200,
+      "name": "Comp/StatusBadge/Selected",
+      "reusable": true,
+      "width": 80,
+      "height": 28,
+      "fill": "#0B6B4B",
+      "cornerRadius": 999,
+      "padding": [
+        2,
+        12
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "y0voS",
+          "name": "Label",
+          "fill": "#FFFFFF",
+          "content": "選定済み",
+          "fontFamily": "Inter",
+          "fontSize": 10,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rPYBX",
+      "x": 100,
+      "y": -200,
+      "name": "Comp/StatusBadge/Review",
+      "reusable": true,
+      "width": 80,
+      "height": 28,
+      "fill": "#E5F0FF",
+      "cornerRadius": 999,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#E0E0E0"
+      },
+      "padding": [
+        2,
+        12
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "rnGWt",
+          "name": "Label",
+          "fill": "#0040A8",
+          "content": "検討中",
+          "fontFamily": "Inter",
+          "fontSize": 10,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "5iUMk",
+      "x": 200,
+      "y": -200,
+      "name": "Comp/StatusBadge/Rejected",
+      "reusable": true,
+      "width": 80,
+      "height": 28,
+      "fill": "#FFFFFF",
+      "cornerRadius": 999,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#F0B3B3"
+      },
+      "padding": [
+        2,
+        12
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "4BwuJ",
+          "name": "Label",
+          "fill": "#B3261E",
+          "content": "却下",
+          "fontFamily": "Inter",
+          "fontSize": 10,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "uG0sJ",
+      "x": 300,
+      "y": -200,
+      "name": "Comp/Button/Primary",
+      "reusable": true,
+      "fill": "#0061FF",
+      "cornerRadius": 999,
+      "gap": 8,
+      "padding": [
+        10,
+        20
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "UM8eQ",
+          "name": "Label",
+          "fill": "#FFFFFF",
+          "content": "ボタン",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wEkRq",
+      "x": 440,
+      "y": -200,
+      "name": "Comp/Button/Secondary",
+      "reusable": true,
+      "fill": "#FFFFFF",
+      "cornerRadius": 999,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#0061FF"
+      },
+      "gap": 8,
+      "padding": [
+        10,
+        20
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "mXDzd",
+          "name": "Label",
+          "fill": "#0061FF",
+          "content": "ボタン",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nIuBs",
+      "x": 580,
+      "y": -200,
+      "name": "Comp/Button/Ghost",
+      "reusable": true,
+      "fill": "#FFFFFF",
+      "cornerRadius": 999,
+      "gap": 8,
+      "padding": [
+        10,
+        20
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "j70P5",
+          "name": "Label",
+          "fill": "#888888",
+          "content": "ボタン",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "F7fXC",
+      "x": 2628,
+      "y": 980,
+      "name": "AISection",
+      "fill": "#F5F5FA",
+      "cornerRadius": 8,
+      "layout": "vertical",
+      "gap": 8,
+      "padding": 16,
+      "children": [
+        {
+          "type": "text",
+          "id": "bLix6",
+          "name": "Title",
+          "fill": "#222222",
+          "content": "AI提案",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "7WV2K",
+          "name": "Hint",
+          "fill": "#666666",
+          "content": "散文メモからノード候補を生成します",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "MNztO",
+          "type": "ref",
+          "ref": "5VUnK",
+          "name": "AIInput",
+          "descendants": {
+            "Wcwhm": {
+              "content": "メモ"
+            },
+            "QklaS": {
+              "content": "自由記述テキストを貼り付け"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Esbsz",
+          "name": "AIActions",
+          "gap": 8,
+          "children": [
+            {
+              "id": "XGlxy",
+              "type": "ref",
+              "ref": "uG0sJ",
+              "name": "RunAI",
+              "descendants": {
+                "UM8eQ": {
+                  "content": "AI整理を実行"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "evBON",
+          "name": "AISuggestList",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "id": "T4EHQ",
+              "type": "ref",
+              "ref": "i2lEX",
+              "name": "AICard1",
+              "descendants": {
+                "EKiEA": {
+                  "content": "ライン構成ノード"
+                },
+                "s9SOu": {
+                  "content": "既存ライン構成をツリーで整理するノード"
+                }
+              }
+            },
+            {
+              "id": "GwhsX",
+              "type": "ref",
+              "ref": "i2lEX",
+              "name": "AICard2",
+              "descendants": {
+                "EKiEA": {
+                  "content": "課題ノード"
+                },
+                "s9SOu": {
+                  "content": "ボトルネックや課題をまとめるノード"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "qTepS",
+      "x": 0,
+      "y": -400,
+      "name": "Comp/ThemeCard",
+      "reusable": true,
+      "width": 288,
+      "fill": "#FFFFFF",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#E0E0E0"
+      },
+      "layout": "vertical",
+      "gap": 8,
+      "padding": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "iDBvE",
+          "name": "TopRow",
+          "width": "fill_container",
+          "padding": [
+            0,
+            0,
+            4,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "dFErC",
+              "name": "Title",
+              "fill": "#000000",
+              "content": "テーマタイトル",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "qItkB",
+              "name": "DeleteBtn",
+              "fill": "#CCCCCC",
+              "content": "×",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "nV8rB",
+          "name": "Meta",
+          "fill": "#888888",
+          "content": "最終更新 2026-03-13 14:30",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "stILr",
+          "name": "BottomRow",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "cZgmx",
+              "type": "ref",
+              "ref": "rPYBX",
+              "name": "cardBadge"
+            },
+            {
+              "type": "text",
+              "id": "BG0c1",
+              "name": "NodeCount",
+              "fill": "#888888",
+              "content": "5 ノード",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "arIO6",
+      "x": 350,
+      "y": -400,
+      "name": "Comp/InputField",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "text",
+          "id": "kGsOW",
+          "name": "Label",
+          "fill": "#4A4F57",
+          "content": "ラベル",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "I38UV",
+          "name": "Box",
+          "width": "fill_container",
+          "height": 40,
+          "fill": "#FFFFFF",
+          "cornerRadius": 4,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E0E0E0"
+          },
+          "padding": [
+            8,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ghf2n",
+              "name": "Placeholder",
+              "fill": "#CCCCCC",
+              "content": "入力してください...",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "5VUnK",
+      "x": 700,
+      "y": -400,
+      "name": "Comp/TextareaField",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "text",
+          "id": "Wcwhm",
+          "name": "Label",
+          "fill": "#4A4F57",
+          "content": "ラベル",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "u25Bd",
+          "name": "Box",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "cornerRadius": 4,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E0E0E0"
+          },
+          "layout": "vertical",
+          "padding": [
+            10,
+            12
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "QklaS",
+              "name": "Placeholder",
+              "fill": "#CCCCCC",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "テキストを入力...",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Y6yKo",
+      "x": 0,
+      "y": -600,
+      "name": "Comp/MapNode",
+      "reusable": true,
+      "width": 200,
+      "fill": "#FFFFFF",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#E0E0E0"
+      },
+      "layout": "vertical",
+      "gap": 4,
+      "padding": [
+        10,
+        14
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "GwakR",
+          "name": "TopRow",
+          "width": "fill_container",
+          "gap": 6,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "xfD6E",
+              "name": "Label",
+              "fill": "#000000",
+              "content": "ノード名",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "id": "4TNVx",
+              "type": "ref",
+              "ref": "rPYBX",
+              "name": "Badge",
+              "width": 56,
+              "height": 20,
+              "descendants": {
+                "rnGWt": {
+                  "fontSize": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "WofgS",
+          "name": "Reason",
+          "fill": "#888888",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "判断理由の概要...",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ANtb7",
+      "x": 220,
+      "y": -600,
+      "name": "Comp/MapNodeRoot",
+      "reusable": true,
+      "width": 220,
+      "fill": "#000000",
+      "cornerRadius": 999,
+      "gap": 8,
+      "padding": [
+        12,
+        16
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon_font",
+          "id": "GKuxj",
+          "name": "Icon",
+          "width": 18,
+          "height": 18,
+          "iconFontName": "target",
+          "iconFontFamily": "lucide",
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "text",
+          "id": "2zlCm",
+          "name": "Label",
+          "fill": "#FFFFFF",
+          "content": "テーマ名",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "i2lEX",
+      "x": 460,
+      "y": -600,
+      "name": "Comp/AISuggestionCard",
+      "reusable": true,
+      "width": 280,
+      "fill": "#F5F5F5",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#E0E0E0"
+      },
+      "layout": "vertical",
+      "gap": 6,
+      "padding": [
+        12,
+        14
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "PzQy9",
+          "name": "TopRow",
+          "width": "fill_container",
+          "gap": 6,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "EKiEA",
+              "name": "Title",
+              "fill": "#000000",
+              "content": "AI提案ノード",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "7LFXY",
+              "name": "Actions",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IXXSl",
+                  "name": "Accept",
+                  "fill": "#000000",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "7w2Sp",
+                  "name": "Reject",
+                  "fill": "#CCCCCC",
+                  "content": "×",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "s9SOu",
+          "name": "Description",
+          "fill": "#666666",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "AIが提案したノードの説明文...",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "q12Rs",
+          "type": "ref",
+          "ref": "rPYBX",
+          "name": "SuggestedStatus",
+          "width": 56,
+          "height": 20,
+          "descendants": {
+            "rnGWt": {
+              "content": "提案",
+              "fontSize": 9
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "sD92E",
+      "x": 0,
+      "y": 0,
+      "name": "Screen/ThemeList",
+      "width": 1440,
+      "height": 900,
+      "fill": "#F5F5FA",
+      "children": [
+        {
+          "type": "frame",
+          "id": "21aYP",
+          "name": "Sidebar",
+          "width": 320,
+          "height": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "right": 1
+            },
+            "fill": "#E0E0E0"
+          },
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "rCtGE",
+              "name": "SidebarHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gW8qg",
+                  "name": "Title",
+                  "fill": "#000000",
+                  "content": "DX 思考マップ",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 24,
+                  "fontWeight": "700",
+                  "letterSpacing": -1,
+                  "fontStyle": "italic"
+                },
+                {
+                  "type": "text",
+                  "id": "wGHOP",
+                  "name": "Subtitle",
+                  "fill": "#888888",
+                  "content": "DX施策の検討過程を構造化",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "M7q0p",
+              "name": "Divider",
+              "fill": "#E0E0E0",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "FFahK",
+              "name": "Actions",
+              "width": "fill_container",
+              "gap": 8,
+              "children": [
+                {
+                  "id": "tqNX4",
+                  "type": "ref",
+                  "ref": "uG0sJ",
+                  "name": "NewThemeBtn",
+                  "descendants": {
+                    "UM8eQ": {
+                      "content": "+ 新規テーマ"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BtFNm",
+              "name": "CardList",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "60wjR",
+                  "type": "ref",
+                  "ref": "qTepS",
+                  "name": "Card1",
+                  "width": "fill_container",
+                  "descendants": {
+                    "dFErC": {
+                      "content": "生産ライン可視化DX"
+                    },
+                    "nV8rB": {
+                      "content": "最終更新 2026-03-12 09:15"
+                    },
+                    "BG0c1": {
+                      "content": "8 ノード"
+                    }
+                  }
+                },
+                {
+                  "id": "wUtDq",
+                  "type": "ref",
+                  "ref": "qTepS",
+                  "name": "Card2",
+                  "width": "fill_container",
+                  "descendants": {
+                    "dFErC": {
+                      "content": "品質異常検知DX"
+                    },
+                    "nV8rB": {
+                      "content": "最終更新 2026-03-10 16:42"
+                    },
+                    "BG0c1": {
+                      "content": "5 ノード"
+                    }
+                  }
+                },
+                {
+                  "id": "fNAAj",
+                  "type": "ref",
+                  "ref": "qTepS",
+                  "name": "Card3",
+                  "width": "fill_container",
+                  "descendants": {
+                    "dFErC": {
+                      "content": "在庫管理自動化"
+                    },
+                    "nV8rB": {
+                      "content": "最終更新 2026-03-08 11:20"
+                    },
+                    "BG0c1": {
+                      "content": "3 ノード"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AXFLm",
+          "name": "MainContent",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": [
+            72,
+            80
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "xntlP",
+              "name": "HeroBlock",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "z1asH",
+                  "name": "HeroTitle",
+                  "fill": "#000000",
+                  "content": "思考を構造化する",
+                  "textAlign": "center",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 40,
+                  "letterSpacing": -2,
+                  "fontStyle": "italic"
+                },
+                {
+                  "type": "text",
+                  "id": "NuPBC",
+                  "name": "HeroSubtitle",
+                  "fill": "#555B6A",
+                  "textGrowth": "fixed-width",
+                  "width": 480,
+                  "content": "DX施策の検討過程・意思決定の経緯を\nマインドマップで可視化・共有する",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Ct8Dx",
+                  "name": "HeroActions",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "8Oz7X",
+                      "type": "ref",
+                      "ref": "uG0sJ",
+                      "name": "HeroCTA",
+                      "descendants": {
+                        "UM8eQ": {
+                          "content": "+ 新規テーマを作成"
+                        }
+                      }
+                    },
+                    {
+                      "id": "H7D1M",
+                      "type": "ref",
+                      "ref": "wEkRq",
+                      "name": "HeroSecondary",
+                      "descendants": {
+                        "mXDzd": {
+                          "content": "使い方を見る"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dupwO",
+              "name": "Features",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8MpTp",
+                  "name": "Feature1",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E0E0E0"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1B26380F",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "QUFAj",
+                      "name": "Icon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "brain",
+                      "iconFontFamily": "lucide",
+                      "fill": "#000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BwLfP",
+                      "name": "Title",
+                      "fill": "#000000",
+                      "content": "思考の構造化",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QnH5Z",
+                      "name": "Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "マインドマップで施策検討をツリー構造で可視化",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tuT8o",
+                  "name": "Feature2",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E0E0E0"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1B26380F",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "43jqq",
+                      "name": "Icon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "sparkles",
+                      "iconFontFamily": "lucide",
+                      "fill": "#000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "k5Zy8",
+                      "name": "Title",
+                      "fill": "#000000",
+                      "content": "AI思考整理",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0MMB7",
+                      "name": "Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Claudeが散文メモを構造化ノードに変換・提案",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FpdMX",
+                  "name": "Feature3",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E0E0E0"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1B26380F",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "NVy2n",
+                      "name": "Icon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "file-text",
+                      "iconFontFamily": "lucide",
+                      "fill": "#000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "X74jK",
+                      "name": "Title",
+                      "fill": "#000000",
+                      "content": "意思決定記録",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rhs72",
+                      "name": "Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "各ノードに判断理由・却下理由を記録し追跡可能",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "duX0o",
+      "x": 1540,
+      "y": 0,
+      "name": "Screen/MindmapCanvas",
+      "width": 1440,
+      "height": 900,
+      "fill": "#F5F5FA",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "2jAxj",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E0E0E0"
+          },
+          "gap": 16,
+          "padding": [
+            0,
+            32
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yvxvn",
+              "name": "HeaderLeft",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Kxtnq",
+                  "name": "Back",
+                  "fill": "#0061FF",
+                  "content": "← テーマ一覧に戻る",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jIyHt",
+                  "name": "Breadcrumb",
+                  "fill": "#222222",
+                  "content": "生産ライン可視化DX",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KgkV1",
+              "name": "HeaderRight",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "H1yLO",
+                  "type": "ref",
+                  "ref": "uG0sJ",
+                  "name": "AIAssistBtn",
+                  "descendants": {
+                    "UM8eQ": {
+                      "content": "AI思考整理"
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "qkzhx",
+                  "name": "Zoom",
+                  "fill": "#4A4F57",
+                  "content": "100%",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "H217q",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Q489E",
+              "name": "Canvas",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#F0F2F7",
+              "layout": "none",
+              "children": [
+                {
+                  "id": "W7u9R",
+                  "type": "ref",
+                  "ref": "ANtb7",
+                  "name": "RootNode",
+                  "x": 420,
+                  "y": 260
+                },
+                {
+                  "id": "KhR3W",
+                  "type": "ref",
+                  "ref": "Y6yKo",
+                  "name": "Node1",
+                  "x": 220,
+                  "y": 140,
+                  "descendants": {
+                    "xfD6E": {
+                      "content": "現状の可視化"
+                    }
+                  }
+                },
+                {
+                  "id": "KMAlo",
+                  "type": "ref",
+                  "ref": "Y6yKo",
+                  "name": "Node2",
+                  "x": 220,
+                  "y": 380,
+                  "descendants": {
+                    "xfD6E": {
+                      "content": "センサー配置"
+                    }
+                  }
+                },
+                {
+                  "id": "SJvQI",
+                  "type": "ref",
+                  "ref": "Y6yKo",
+                  "name": "Node3",
+                  "x": 720,
+                  "y": 260,
+                  "descendants": {
+                    "xfD6E": {
+                      "content": "ダッシュボード"
+                    }
+                  }
+                },
+                {
+                  "type": "path",
+                  "id": "Qjg1w",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Edge1",
+                  "geometry": "M470 290c-70-30-130-70-170-100",
+                  "width": 1,
+                  "height": 1,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#C3CAD9"
+                  }
+                },
+                {
+                  "type": "path",
+                  "id": "pitMO",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Edge2",
+                  "geometry": "M470 310c-70 30-130 70-170 100",
+                  "width": 1,
+                  "height": 1,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#C3CAD9"
+                  }
+                },
+                {
+                  "type": "path",
+                  "id": "MUVk3",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Edge3",
+                  "geometry": "M540 290c80-20 140-30 200-30",
+                  "width": 1,
+                  "height": 1,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#C3CAD9"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1KeLT",
+              "name": "SidePanel",
+              "width": 360,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#E0E0E0"
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tztgY",
+                  "name": "SectionHeader",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QrkMW",
+                      "name": "Title",
+                      "fill": "#222222",
+                      "content": "ノード詳細",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PG6Ph",
+                      "name": "Meta",
+                      "fill": "#888888",
+                      "content": "選択中のノードのメタデータを編集",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "id": "8zxuw",
+                  "type": "ref",
+                  "ref": "arIO6",
+                  "name": "Field/Label",
+                  "descendants": {
+                    "kGsOW": {
+                      "content": "ラベル"
+                    },
+                    "ghf2n": {
+                      "content": "例）ライン1の現状"
+                    }
+                  }
+                },
+                {
+                  "id": "CfnoJ",
+                  "type": "ref",
+                  "ref": "5VUnK",
+                  "name": "Field/Reason",
+                  "descendants": {
+                    "Wcwhm": {
+                      "content": "判断理由"
+                    },
+                    "QklaS": {
+                      "content": "なぜこの選択に至ったかを記録"
+                    }
+                  }
+                },
+                {
+                  "id": "FldYp",
+                  "type": "ref",
+                  "ref": "5VUnK",
+                  "name": "Field/RejectReason",
+                  "descendants": {
+                    "Wcwhm": {
+                      "content": "却下理由"
+                    },
+                    "QklaS": {
+                      "content": "却下した場合の理由を記録"
+                    }
+                  }
+                },
+                {
+                  "id": "7gd4A",
+                  "type": "ref",
+                  "ref": "5VUnK",
+                  "name": "Field/Related",
+                  "descendants": {
+                    "Wcwhm": {
+                      "content": "関連情報"
+                    },
+                    "QklaS": {
+                      "content": "関連資料・リンクなど"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "myl8R",
+                  "name": "StatusRow",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cPIZs",
+                      "name": "StatusLabel",
+                      "fill": "#4A4F57",
+                      "content": "ステータス",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "dXoKZ",
+                      "type": "ref",
+                      "ref": "u1YHz",
+                      "name": "StatusSelected"
+                    },
+                    {
+                      "id": "uJNsr",
+                      "type": "ref",
+                      "ref": "rPYBX",
+                      "name": "StatusReview"
+                    },
+                    {
+                      "id": "BO9F0",
+                      "type": "ref",
+                      "ref": "5iUMk",
+                      "name": "StatusRejected"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

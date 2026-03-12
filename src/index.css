@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #0061FF;
+  --color-primary-hover: #0050D6;
+  --color-black: #000000;
+  --color-dark: #222222;
+  --color-muted: #888888;
+  --color-subtle: #555B6A;
+  --color-label: #4A4F57;
+  --color-border: #E0E0E0;
+  --color-bg: #F5F5FA;
+  --color-canvas-bg: #F0F2F7;
+  --color-white: #FFFFFF;
+  --color-node-edge: #C3CAD9;
+
+  --status-selected-bg: #0B6B4B;
+  --status-selected-fg: #FFFFFF;
+  --status-considering-bg: #E5F0FF;
+  --status-considering-fg: #0040A8;
+  --status-considering-border: #E0E0E0;
+  --status-rejected-bg: #FFFFFF;
+  --status-rejected-fg: #B3261E;
+  --status-rejected-border: #F0B3B3;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 999px;
+
+  --shadow-card: 0 8px 24px rgba(27, 38, 56, 0.06);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  border-radius: var(--radius-md);
+}
+
+.react-flow__edge-path {
+  stroke: var(--color-node-edge);
+}
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+}
+
+.toast {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-white);
+  background: var(--color-dark);
+  box-shadow: var(--shadow-card);
+  animation: slideIn 0.2s ease;
+  max-width: 320px;
+}
+
+.toast.error { background: #B3261E; }
+.toast.warning { background: #7C5800; }
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);   opacity: 1; }
+}
+
+/* Storage warning banner */
+.storage-warning {
+  background: #FFF3CD;
+  border-bottom: 1px solid #FFD700;
+  padding: 8px 24px;
+  font-size: 12px;
+  color: #7C5800;
+  text-align: center;
+}
