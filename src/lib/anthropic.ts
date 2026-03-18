@@ -1,7 +1,5 @@
 import type { NodeSuggestion } from '@/types'
 
-const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY as string | undefined
-
 interface AnthropicError {
   type: 'api_error' | 'parse_error' | 'auth_error' | 'rate_limit'
   message: string
@@ -12,19 +10,12 @@ type Result<T> = { ok: true; data: T } | { ok: false; error: AnthropicError }
 export async function callAnthropicStructurize(
   prompt: string
 ): Promise<Result<NodeSuggestion[]>> {
-  if (!API_KEY) {
-    return { ok: false, error: { type: 'auth_error', message: 'APIキーが設定されていません。.envファイルを確認してください。' } }
-  }
-
   let response: Response
   try {
     response = await fetch('/api/anthropic/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': API_KEY,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true',
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',

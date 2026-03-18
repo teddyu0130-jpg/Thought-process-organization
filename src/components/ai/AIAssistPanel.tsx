@@ -61,7 +61,7 @@ export default function AIAssistPanel({ parentNodeId, onClose }: Props) {
           <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--color-dark)' }}>AI提案</span>
           <span style={{ fontSize: 12, color: 'var(--color-muted)' }}>散文メモからノード候補を生成します</span>
         </div>
-        <button onClick={onClose} style={{ color: 'var(--color-muted)', padding: 4 }}>
+        <button aria-label="閉じる" onClick={onClose} style={{ color: 'var(--color-muted)', padding: 4 }}>
           <X size={16} />
         </button>
       </div>

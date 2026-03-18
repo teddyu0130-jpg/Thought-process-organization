@@ -82,8 +82,8 @@ graph TB
 | 描画 | @xyflow/react v12 | マインドマップキャンバス | `useNodesState` / `useEdgesState` 利用 |
 | State | Zustand v5 | グローバル状態管理・localStorage同期 | 約1KB gzip |
 | Persistence | localStorage | テーマ/ノード/エッジの永続化 | `lib/storage.ts`に集約 |
-| AI | Anthropic API（Claude claude-sonnet-4-6） | 思考整理補助・構造化提案 | Vite devProxy経由（CORS回避） |
-| Build | Vite 5 | 開発サーバー・バンドル・proxy設定 | `server.proxy`でAnthropic APIをプロキシ |
+| AI | Anthropic API（Claude claude-sonnet-4-6） | 思考整理補助・構造化提案 | 本番はVercel Functions経由、ローカルはVite devProxyでCORS回避 |
+| Build | Vite 5 | 開発サーバー・バンドル・proxy設定 | 開発時のみ`server.proxy`でAnthropic APIをプロキシ |
 
 ---
 
@@ -318,7 +318,7 @@ class LocalStorageAdapter implements ThemeRepository {
 
 | Field | Detail |
 |---|---|
-| Intent | Anthropic APIへのHTTPリクエストをVite devProxy経由で実行し、レスポンスをパースする |
+| Intent | Anthropic APIへのHTTPリクエストをアプリ専用のAPIエンドポイント経由で実行し、レスポンスをパースする |
 | Requirements | 4.1, 4.4, 4.5 |
 
 **Contracts**: API [ ✓ ]
@@ -327,11 +327,11 @@ class LocalStorageAdapter implements ThemeRepository {
 
 | Method | Endpoint | Request | Response | Errors |
 |---|---|---|---|---|
-| POST | /api/anthropic/messages | MessagesRequest | NodeSuggestion[] | 401, 429, 500 |
+| POST | /api/anthropic/v1/messages | MessagesRequest | NodeSuggestion[] | 401, 429, 500 |
 
 **Implementation Notes**
-- APIキーは`import.meta.env.VITE_ANTHROPIC_API_KEY`から読み込む
-- Vite `vite.config.ts`に`server.proxy: { '/api/anthropic': { target: 'https://api.anthropic.com', changeOrigin: true, rewrite: (path) => path.replace(/^\/api\/anthropic/, '') } }`を設定する
+- 本番環境では`/api/anthropic/v1/messages`をVercel Functionsとして実装し、サーバーサイドで`process.env.ANTHROPIC_API_KEY`を使用してAnthropic APIを呼び出す
+- 開発環境では必要に応じてVite `vite.config.ts`の`server.proxy`で`/api/anthropic`→`https://api.anthropic.com`にプロキシし、同一のエンドポイントを利用する
 - レスポンスのパース失敗時は`Result<NodeSuggestion[], AIError>`型でエラーを返し、UIに伝播する
 
 ---

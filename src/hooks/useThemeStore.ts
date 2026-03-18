@@ -34,7 +34,7 @@ function getDescendantIds(nodes: DecisionNode[], edges: FlowEdge[], nodeId: stri
 export const useThemeStore = create<ThemeStoreState>((set, get) => ({
   themes: storageAdapter.loadThemes(),
   currentThemeId: null,
-  storageWarning: false,
+  storageWarning: storageAdapter.getStorageUsage().ratio >= 0.9,
 
   currentTheme: () => {
     const { themes, currentThemeId } = get()
@@ -66,7 +66,8 @@ export const useThemeStore = create<ThemeStoreState>((set, get) => ({
   deleteTheme: (themeId) => {
     const themes = get().themes.filter((t) => t.id !== themeId)
     storageAdapter.saveThemes(themes)
-    set({ themes, currentThemeId: get().currentThemeId === themeId ? null : get().currentThemeId })
+    const usage = storageAdapter.getStorageUsage()
+    set({ themes, currentThemeId: get().currentThemeId === themeId ? null : get().currentThemeId, storageWarning: usage.ratio >= 0.9 })
   },
 
   selectTheme: (themeId) => {

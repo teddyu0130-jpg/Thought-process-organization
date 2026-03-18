@@ -14,9 +14,9 @@
   - `@/` パスエイリアスを `vite.config.ts` で `src/` にマップする
   - _Requirements: 2.1_
 
-- [ ] 1.2 Vite devProxy と環境変数の設定
-  - `vite.config.ts` に `server.proxy` を設定し、`/api/anthropic` を `https://api.anthropic.com` にプロキシする
-  - `.env` ファイルを作成し `VITE_ANTHROPIC_API_KEY` を定義する
+- [ ] 1.2 Vercel Functions と環境変数の設定
+  - プロジェクトルートに `api/anthropic/v1/messages.ts` を追加し、Anthropic API へのプロキシ関数を実装する
+  - `.env` ファイルを作成し `ANTHROPIC_API_KEY` を定義する
   - `.env` を `.gitignore` に追加する
   - `src/` 配下にディレクトリ構造（`components/`、`hooks/`、`types/`、`lib/`、`config/`）を作成する
   - _Requirements: 4.5_
@@ -95,8 +95,8 @@
 
 - [ ] 7. AI 思考整理機能
 - [ ] 7.1 (P) AnthropicClient の実装
-  - Vite proxy（`/api/anthropic/messages`）を通じて Anthropic API にリクエストを送る関数を実装する
-  - `import.meta.env.VITE_ANTHROPIC_API_KEY` でAPIキーをヘッダーに設定する
+  - クライアントからは `/api/anthropic/v1/messages` に対して JSON ボディのみを送信し、APIキーを扱わない
+  - サーバーサイド（Vercel Functions）で `process.env.ANTHROPIC_API_KEY` を用いて Anthropic API にリクエストを送る
   - レスポンスの content テキストから `NodeSuggestion[]` を JSON パースして返す
   - パース失敗時はエラーオブジェクトを返す（例外をスローしない）
   - _Requirements: 4.1, 4.4, 4.5_

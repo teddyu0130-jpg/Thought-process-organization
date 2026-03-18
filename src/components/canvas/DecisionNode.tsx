@@ -66,6 +66,7 @@ export default memo(function DecisionNodeComponent({ id, data }: Props) {
     <>
       <Handle type="target" position={Position.Top} style={{ opacity: 0 }} />
       <div
+        data-testid="node-click-area"
         onClick={() => onSelect(id)}
         style={{
           background: 'var(--color-white)',
